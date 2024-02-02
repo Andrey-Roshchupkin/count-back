@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Specify your target date in the format: "Month Day, Year HH:mm:ss"
-  var targetDate = new Date("January 20, 2024 22:00:00").getTime();
+  var targetDate = new Date("February 10, 2024 08:50:00").getTime();
 
   var countdownElement = document.getElementById("countdown");
 
@@ -11,16 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (timeDifference > 0) {
       var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
-        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      var minutes = Math.floor(
-        (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-      );
+      var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-      countdownElement.innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
     } else {
       clearInterval(countdownInterval);
       countdownElement.innerHTML = "Already arrived";
