@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Specify your target date in the format: "Month Day, Year HH:mm:ss"
-  var targetDate = new Date("October 2, 2024 04:05:00").getTime();
+  var targetDate = new Date("March 1, 2025 21:50:00").getTime();
 
   var countdownElement = document.getElementById("countdown");
 
